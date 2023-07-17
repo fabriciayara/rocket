@@ -8,11 +8,10 @@
   --text-color: white;
   --bg-url: url(./Assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --surface-color:rgba(255, 255, 255, 0.05);
+  --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
---highlight-color:rgba(255, 255, 255, 0.2);
---switch-bg-url: url(./Assets/MoonStars.svg);
-
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./Assets/MoonStars.svg);
 }
 
 .light {
@@ -20,13 +19,14 @@
   --bg-url: url(./Assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
-   --surface-color-hover: rgba(0, 0, 0, 0.2);
-   --highlight-color:rgba(0, 0, 0, 0.1);
-   --switch-bg-url:url(./Assets/Sun.svg);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./Assets/Sun.svg);
 }
 
 body {
   background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
 }
 body {
   font-family: "Sofia", sans-serif;
@@ -55,13 +55,11 @@ body {
   margin-top: 8px;
 }
 
-#switch{
-
+#switch {
   position: relative;
   width: 64px;
 
   margin: 4px auto;
-
 }
 
 #switch button {
@@ -73,15 +71,14 @@ body {
 
   position: absolute;
   top: 50%;
-  left:0;
+  left: 0;
   z-index: 1;
   transform: translateY(-50%);
-
 }
 
-.light #switch button{
- right:0; 
- left: initial;
+.light #switch button {
+  right: 0;
+  left: initial;
 }
 
 #switch span {
@@ -92,7 +89,6 @@ body {
   border: 1px solid var(--stroke-color);
   --webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
-
 }
 
 ul {
@@ -161,8 +157,17 @@ footer {
   padding: 24px 0;
   text-align: center;
 }
-p{
+p {
   display: flex;
   position: center;
   justify-content: center;
+}
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop_dark.jpg);
+
+    .light {
+      --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+  }
 }
